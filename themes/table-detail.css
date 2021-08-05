@@ -1,0 +1,92 @@
+@media (max-width: 767px) {
+	body{font:300 11px/11px Antic,Raleway,Helvetica;}
+	h2.text-center{text-align: left;font-size: 1.8em;}
+	h2 {font: 300 1.8em Antic,Raleway,Helvetica;padding:10px 0px;margin-bottom: 2px;}
+	h4 {font: 300 1em Antic,Raleway,Helvetica;font-weight: bold;}
+.lead {padding:10px;	margin-bottom:2px;}
+.table{
+	padding: 3px;
+	font-size: 11px;
+	font: 300 1em Antic,Raleway,Helvetica;
+}
+
+}
+
+.lead {
+	padding: 10px;
+	margin-bottom: 2px;
+}
+ @page 
+    {
+        size: auto;   /* auto is the initial value */
+        margin: 0mm;  /* this affects the margin in the printer settings */
+	}
+.noPrint {
+   margin-bottom:10px;
+  }
+@media print {
+     html, body, table, td {
+        height: auto;
+        font-size: 7pt; /* changing to 10pt has no impact */
+    }
+
+	#myCanvas {
+		display:block; width:90%; height:auto;
+	}	
+	
+	.lead {
+	padding: 5px ;
+	margin-bottom: 0px;
+	font-size: 10pt; 
+	}	
+	.h2 {
+	padding: 5px;
+	margin-bottom: 0px;
+	}
+	
+	.btn {
+	display:none;
+	}
+	
+	.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+	float: left!important;
+	}
+	
+.noPrint {
+    display:none;
+  }
+input {border-style: none; display: inline}
+textarea:focus, input:focus{
+    outline: none;
+}
+.form-control{border:none}
+}
+
+
+	ul.ui-autocomplete {
+    z-index: 5000;
+	}
+
+._flash {background-color: #fc1144 !important;}
+.form-control{width:100%;height:20px;font-size:12pt;padding:0 0 0 5px;-webkit-border-radius: 0;-moz-border-radius: 0;border-radius: 0;}
+	/* Color of invalid field */
+.has-error .form-group,
+.has-error .control-label,
+.has-error .help-block,
+.has-error .form-control-feedback {
+    color: #a94442;
+}
+
+/* Color of valid field */
+.has-success .form-group,
+.has-success .control-label,
+.has-success .help-block,
+.has-success .form-control-feedback {
+    color: #3c763d;
+}
+    .box{
+        max-width:100%;
+        margin:auto;
+        padding:20px;
+        box-shadow:0 0 10px rgba(0, 0, 0, .15);
+    }

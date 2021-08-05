@@ -1,0 +1,22 @@
+<ifmodule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{HTTPS} !=on
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+RewriteRule ^sandboxm/post/?$ sandbox.php [L]
+RewriteRule ^sandboxm/get/?$ sandbox_get.php [L]
+RewriteRule ^logout/?$ logout.php [L]
+RewriteRule ^register-proses/?$ proses_daftar.php [L]
+RewriteRule ^data/([^/]+)/?$ detail/detail.php?seo=detail [L]
+RewriteCond %{REQUEST_URI} /api/([^/]+)
+RewriteRule ^(.*)$ load-api.php?mod=%1 [L]
+
+RewriteRule ^$ index.php [QSA,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule (.*) index.php?&link=$1 [L]
+
+#Options All -Indexes
+</ifmodule>
