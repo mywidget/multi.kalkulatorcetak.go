@@ -102,13 +102,6 @@
   </nav>
   <!-- End Navbar -->
   <div class="wrapper">
-     <?php
-    $link = $_GET['link'] && $_GET['link'] ? $_GET['link'] : '';
-    //echo $link;
-    if($link == 'data'){
-        echo "data";
-    }elseif ($link == '' || $link == 'index.php' || $link == 'index.html' || $link == 'index') {
-    ?>
       <div class="section section-hero section-shaped">
         <div class="shape shape-style-1 shape-primary">
           <span class="span-200"></span>
@@ -179,13 +172,6 @@
           </div>
         </div>
       </div>
-    <?php
-      echo $html;
-    } else {
-      include "404.php";
-    }
-
-    ?>
     <div class="se-pre-con"></div>
 	 <div class="go-top"><p class="go-top-text"></p></div>
     <footer class="footer">
