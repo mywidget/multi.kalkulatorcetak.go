@@ -18,13 +18,14 @@ $(document).ready(function () {
             $("#title-mod").html('Hitung ' + namamod);
             $.ajaxQueue({
                 type: 'POST',
-                url: SITE_API + '/appm/',
+                url: SITE_API + '/app/launch/',
                 data: {
                     modul: l_modul,
                     link: modlink,
                     modfile: modfile,
                     namamod: namamod,
                     warna: warna,
+                    clas: "row",
                     appid: appid
                 },
                 cache: false,
@@ -36,7 +37,7 @@ $(document).ready(function () {
                         $(".se-pre-con").fadeOut("slow");
                         $('.fetched-data').html(data);
                         $('#modal-lgs').addClass(classmod);
-                    } else {
+                        } else {
                         $('.fetched-dua').html(data);
                         $('#modal-lg2').addClass(classmod);
                         $("#myModalProd").hide();
@@ -44,7 +45,7 @@ $(document).ready(function () {
                     }
                 }
             });
-        } else if (modfile == 'video') {
+            } else if (modfile == 'video') {
             var vid = $(e.relatedTarget).data('vid');
             var modname = $(e.relatedTarget).data('modename');
             var vidlink = $(e.relatedTarget).data('vidlink');
@@ -53,12 +54,13 @@ $(document).ready(function () {
                 type: 'POST',
                 url: SITE_API + '/appv/',
                 data: {
-                    modul: vid,
-                    link: vidlink,
-                    embed: modembed,
-                    modname: modname,
+                    modul: l_modul,
+                    link: modlink,
                     modfile: modfile,
-                    warna: warna
+                    namamod: namamod,
+                    warna: warna,
+                    clas: "row",
+                    appid: appid
                 },
                 cache: false,
                 beforeSend: function () {
@@ -73,15 +75,17 @@ $(document).ready(function () {
                     $(".se-pre-con").fadeOut("slow");
                 }
             });
-        } else {
+            } else {
             $.ajaxQueue({
                 type: 'POST',
-                url: SITE_API + '/appm/',
+                url: SITE_API + '/app/launch',
                 data: {
                     modul: l_modul,
                     link: modlink,
                     modfile: modfile,
+                    namamod: namamod,
                     warna: warna,
+                    clas: "row",
                     appid: appid
                 },
                 cache: false,
@@ -93,7 +97,7 @@ $(document).ready(function () {
                         $('.fetched-data').html(data);
                         $('#modal-lgs').addClass(classmod);
                         $(".se-pre-con").fadeOut("slow");
-                    } else {
+                        } else {
                         $('.fetched-dua').html(data);
                         $('#modal-lg2').addClass(classmod);
                         $("#myModalProd").hide();
@@ -118,17 +122,17 @@ $(document).ready(function () {
     });
 });
 $(function(){
-
-  //Scroll event
-  $(window).scroll(function(){
-    var scrolled = $(window).scrollTop();
-    if (scrolled > 200) $('.go-top').fadeIn('slow');
-    if (scrolled < 200) $('.go-top').fadeOut('slow');
-  });
-  
-  //Click event
-  $('.go-top').click(function () {
-    $("html, body").animate({ scrollTop: "0" },  500);
-  });
-
+    
+    //Scroll event
+    $(window).scroll(function(){
+        var scrolled = $(window).scrollTop();
+        if (scrolled > 200) $('.go-top').fadeIn('slow');
+        if (scrolled < 200) $('.go-top').fadeOut('slow');
+    });
+    
+    //Click event
+    $('.go-top').click(function () {
+        $("html, body").animate({ scrollTop: "0" },  500);
+    });
+    
 });
