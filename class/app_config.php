@@ -9,7 +9,7 @@
 $config = array(
 	"APPS_ID"	=> "673fdc8e-cc8a-45e3-86b6-d3eb16149b45",
 	"APPS_PUBLIC"	=> "cca7231e4e28811e1c2e05b1a17c372120a4f0c5b59fc445bc0a2367388bf74a",
-	"SITE_API"	=> "https://api.kalkulatorcetak.go"
+	"SITE_API"	=> "https://kalkulatorcetak.go"
 );
 $_jenis = ['secret'=>$config['APPS_PUBLIC'],'app_id'=>$config['APPS_ID']];
 $_URL = $config['SITE_API'].'/app/load/0/6/'.$config['APPS_ID'].'/'.$config['APPS_PUBLIC']; 
