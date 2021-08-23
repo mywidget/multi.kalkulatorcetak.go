@@ -6,7 +6,7 @@ include "header_detail.php";
 ?>
 <body style="background-color: white; background:none;margin:0 auto" id="MyBody">
 	<?php
-		
+	
 		$sub  = (isset($_POST['submit']) ? $_POST['submit'] : '');
 		$val1 = (isset($_POST['data1']) ? $_POST['data1'] : '');
 		$val2 = (isset($_POST['data2']) ? $_POST['data2'] : '');
@@ -301,7 +301,7 @@ include "header_detail.php";
 					<tr><td>Muat</td><td>: <?=$array['muat'];?> model</td></tr>	
 					<tr><td>Jumlah Set</td><td>: <?=$array['jmlset'] . " (" . $array['ketbb'] . ")";?> </td></tr>	
 					<?php 
-						if($array['jmesin'] == 'PrintDigital' ){
+						if($array['jenismesin'] == 'PrintDigital' ){
 							if($array['replat'] > 1 ){ ?>
 							<tr><td>Replat</td><td>:</td></tr>	
 							<?php 
@@ -334,7 +334,7 @@ include "header_detail.php";
 							<tr><td>Muat</td><td>: <?=$array2['muat'];?> model</td></tr>	
 							<tr><td>Jumlah Set</td><td>: <?=$array2['jmlset'] . " (" . $array2['ketbb'] . ")";?> </td></tr>	
 							<?php 
-								if($array2['jmesin'] == 'PrintDigital' ){
+								if($array2['jenismesin'] == 'PrintDigital' ){
 									if($array2['replat'] > 1 ){ ?>
 									<tr><td>Replat a</td><td>:</td></tr>	
 									<?php 
@@ -701,9 +701,14 @@ include "header_detail.php";
 							$ongkos_potong = $array2['ongkos_potong'];
 						}
 					}
+					if($array['jenismesin'] == 'PrintDigital' ){
+					$persen = 0;
+					}else{
+					$persen = $array['persen'];
+					}
 					$total2 = $array2['totcetak'] + $array2['totbhn'] + $array2['tot_ctp'] + $ongkos_potong + $array2['totlaminating'] + $array2['finishing1'] + $array2['finishing2'] + $array2['finishing3'] + $array2['finishing4'] + $array2['finishing5'] + $array2['finishing6']+ $array2['finishing7']+ $array2['finishing8']+ $array2['finishing9']+ $array2['finishing10']+ $array2['tot_lipat'] ;
 					$subtotal = $total1 + $total2;
-					$profit = $subtotal * ($array['persen'] / 100);
+					$profit = $subtotal * ($persen / 100);
 					$grandtotal = $subtotal + $profit;	
 					
 				?>			
@@ -842,9 +847,14 @@ include "header_detail.php";
 							$ongkos_potong = $array3['ongkos_potong'];
 						}
 					}
+					if($array['jenismesin'] == 'PrintDigital' ){
+					$persen = 0;
+					}else{
+					$persen = $array['persen'];
+					}
 					$total3 = $array3['totcetak'] + $array3['totbhn'] + $array3['tot_ctp'] + $ongkos_potong + $array3['totlaminating'] + $array3['finishing1'] + $array3['finishing2'] + $array3['finishing3'] + $array3['finishing4'] + $array3['finishing5'] + $array3['finishing6'] + $array3['finishing7']+ $array3['finishing8']+ $array3['finishing9']+ $array3['finishing10']+ $array3['tot_lipat'] ;
 					$subtotal = $total1 + $total2 +  $total3;
-					$profit = $subtotal * ($array['persen'] / 100);
+					$profit = $subtotal * ($persen / 100);
 					$grandtotal = $subtotal + $profit;	
 					
 				?>			
@@ -979,9 +989,14 @@ include "header_detail.php";
 							$ongkos_potong = $array4['ongkos_potong'];
 						}
 					}
+					if($array['jenismesin'] == 'PrintDigital' ){
+					$persen = 0;
+					}else{
+					$persen = $array['persen'];
+					}
 					$total4 = $array4['totcetak'] + $array4['totbhn'] + $array4['tot_ctp'] + $ongkos_potong + $array4['totlaminating'] + $array4['finishing1'] + $array4['finishing2'] + $array4['finishing3'] + $array4['finishing4'] + $array4['finishing5'] + $array4['finishing6'] + $array4['finishing7']+ $array4['finishing8']+ $array4['finishing9']+ $array4['finishing10']+ $array4['tot_lipat'] ;
 					$subtotal = $total1 + $total2 + $total3 + $total4;
-					$profit = $subtotal * ($array['persen'] / 100);
+					$profit = $subtotal * ($persen / 100);
 					$grandtotal = $subtotal + $profit;	
 					
 				?>
@@ -1116,9 +1131,14 @@ include "header_detail.php";
 							$ongkos_potong = $array5['ongkos_potong'];
 						}
 					}
+					if($array['jenismesin'] == 'PrintDigital' ){
+					$persen = 0;
+					}else{
+					$persen = $array['persen'];
+					}
 					$total5 = $array5['totcetak'] + $array5['totbhn'] + $array5['tot_ctp'] + $ongkos_potong + $array5['totlaminating'] + $array5['finishing1'] + $array5['finishing2'] + $array5['finishing3'] + $array5['finishing4'] + $array5['finishing5'] + $array5['finishing6'] + $array5['finishing7']+ $array5['finishing8']+ $array5['finishing9']+ $array5['finishing10']+ $array5['tot_lipat'] ;
 					$subtotal = $total1 + $total2 + $total3 + $total4 + $total5;
-					$profit = $subtotal * ($array['persen'] / 100);
+					$profit = $subtotal * ($persen / 100);
 					$grandtotal = $subtotal + $profit;	
 					
 				?>
@@ -1253,9 +1273,14 @@ include "header_detail.php";
 							$ongkos_potong = $array6['ongkos_potong'];
 						}
 					}
+					if($array['jenismesin'] == 'PrintDigital' ){
+					$persen = 0;
+					}else{
+					$persen = $array['persen'];
+					}
 					$total6 = $array6['totcetak'] + $array6['totbhn'] + $array6['tot_ctp'] + $ongkos_potong + $array6['totlaminating'] + $array6['finishing1'] + $array6['finishing2'] + $array6['finishing3'] + $array6['finishing4'] + $array6['finishing5'] + $array6['finishing6'] + $array6['finishing7']+ $array6['finishing8']+ $array6['finishing9']+ $array6['finishing10'] + $array6['tot_lipat'] ;
 					$subtotal = $total1 + $total2 + $total3 + $total4 + $total5 + $total6;
-					$profit = $subtotal * ($array['persen'] / 100);
+					$profit = $subtotal * ($persen / 100);
 					$grandtotal = $subtotal + $profit;	
 					
 				?>
@@ -1387,9 +1412,14 @@ include "header_detail.php";
 							$ongkos_potong = $array7['ongkos_potong'];
 						}
 					}
+					if($array['jenismesin'] == 'PrintDigital' ){
+					$persen = 0;
+					}else{
+					$persen = $array['persen'];
+					}
 					$total7 = $array7['totcetak'] + $array7['totbhn'] + $array7['tot_ctp'] + $ongkos_potong + $array7['totlaminating'] + $array7['finishing1'] + $array7['finishing2'] + $array7['finishing3'] + $array7['finishing4'] + $array7['finishing5'] + $array7['finishing6'] + $array7['finishing7']+ $array7['finishing8']+ $array7['finishing9']+ $array7['finishing10'] ;
 					$subtotal = $total1 + $total2 + $total3 + $total4 + $total5 + $total6 + $total7;
-					$profit = $subtotal * ($array['persen'] / 100);
+					$profit = $subtotal * ($persen / 100);
 					$grandtotal = $subtotal + $profit;	
 					
 				?>
@@ -1516,9 +1546,14 @@ include "header_detail.php";
 							$ongkos_potong = $array8['ongkos_potong'];
 						}
 					}
+					if($array['jenismesin'] == 'PrintDigital' ){
+					$persen = 0;
+					}else{
+					$persen = $array['persen'];
+					}
 					$total8 = $array8['totcetak'] + $array8['totbhn'] + $array8['tot_ctp'] + $ongkos_potong + $array8['totlaminating'] + $array8['finishing1'] + $array8['finishing2'] + $array8['finishing3'] + $array8['finishing4'] + $array8['finishing5'] + $array8['finishing6'] + $array8['finishing7']+ $array8['finishing8']+ $array8['finishing9']+ $array8['finishing10'];
 					$subtotal = $total1 + $total2 + $total3 + $total4 + $total5 + $total6 + $total7 + $total8;
-					$profit = $subtotal * ($array['persen'] / 100);
+					$profit = $subtotal * ($persen / 100);
 					$grandtotal = $subtotal + $profit;	
 					
 				?>
@@ -1638,11 +1673,17 @@ include "header_detail.php";
 					}else{
 					$Nama_Harga = "Harga Satuan";
 				}
+				if($array['jenismesin'] == 'PrintDigital' ){
+					$persen = 0;
+					}else{
+					$persen = $array['persen'];
+					}
+					// echo $array['jenismesin'];
 				?>	
 				
 				<table class='table table-striped'>
 					<tr><td>Total Biaya</td><td style="width:5%!important">Rp.</td><td  style="width:15%!important" class="text-right"><?=rp($subtotal);?></td></tr>	
-					<tr><td>Persentase Profit = <?=rp($array['persen']);?> %</td><td>Rp.</td><td class="text-right"><?=rp($profit);?></td></tr>	
+					<tr><td>Persentase Profit = <?=rp($persen);?> %</td><td>Rp.</td><td class="text-right"><?=rp($profit);?></td></tr>	
 					<tr><td><h4 style="padding:0px; margin-bottom:0px;"><?=$Nama_Harga;?></h4></td><td>Rp.</td><td  class="text-right"><?=rp($hrgsatuan);?></td></tr>
 					<tr><td><h4 style="padding:0px; margin-bottom:0px;">Total Jual</h4></td><td>Rp.</td><td  class="text-right"><?=rp($grandtotal);?></td></tr>
 				</table>
