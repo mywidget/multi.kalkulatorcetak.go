@@ -141,7 +141,7 @@ include "header_detail.php";
 							}	
 							$_potong = array('tinggicetak'=>$lbr_pot,'lebarcetak'=>$tinggi_pot,'panjangtext'=>$lbr_plano,'lebartext'=>$tinggi_plano);
 							$push = array_merge($_jenis,$_potong);
-							$sync = curl($config['SITE_API'].'/potong/get/',json_encode($push));
+							$sync = curl($config['SITE_APIS'].'/potong/get/',json_encode($push));
 							$hitpot = json_decode($sync,true);
 							$hasil = json_encode($hitpot[0]['jml']);
 						?>	
@@ -160,7 +160,7 @@ include "header_detail.php";
 							}	
 							$_potong2 = array('tinggicetak'=>$lbr_pot2,'lebarcetak'=>$tinggi_pot2,'panjangtext'=>$lbr_plano2,'lebartext'=>$tinggi_plano2);
 							$push2 = array_merge($_jenis,$_potong2);
-							$sync2 = curl($config['SITE_API'].'/potong/get/',json_encode($push2));
+							$sync2 = curl($config['SITE_APIS'].'/potong/get/',json_encode($push2));
 							$hitpot2= json_decode($sync2,true);
 							$hasil2 = json_encode($hitpot2[0]['jml']);
 						?>	
@@ -180,7 +180,7 @@ include "header_detail.php";
 							}	
 							$_potong3 = array('tinggicetak'=>$lbr_pot3,'lebarcetak'=>$tinggi_pot3,'panjangtext'=>$lbr_plano3,'lebartext'=>$tinggi_plano3);
 							$push3 = array_merge($_jenis,$_potong3);
-							$sync3 = curl($config['SITE_API'].'/potong/get/',json_encode($push3));
+							$sync3 = curl($config['SITE_APIS'].'/potong/get/',json_encode($push3));
 							$hitpot3= json_decode($sync3,true);
 							$hasil3 = json_encode($hitpot3[0]['jml']);
 						?>	
@@ -201,7 +201,7 @@ include "header_detail.php";
 							}	
 							$_potong4 = array('tinggicetak'=>$lbr_pot4,'lebarcetak'=>$tinggi_pot4,'panjangtext'=>$lbr_plano4,'lebartext'=>$tinggi_plano4);
 							$push4 = array_merge($_jenis,$_potong4);
-							$sync4 = curl($config['SITE_API'].'/potong/get/',json_encode($push4));
+							$sync4 = curl($config['SITE_APIS'].'/potong/get/',json_encode($push4));
 							$hitpot4= json_decode($sync4,true);
 							$hasil4 = json_encode($hitpot4[0]['jml']);
 						?>	
@@ -221,7 +221,7 @@ include "header_detail.php";
 							}	
 							$_potong5 = array('tinggicetak'=>$lbr_pot5,'lebarcetak'=>$tinggi_pot5,'panjangtext'=>$lbr_plano5,'lebartext'=>$tinggi_plano5);
 							$push5 = array_merge($_jenis,$_potong5);
-							$sync5 = curl($config['SITE_API'].'/potong/get/',json_encode($push5));
+							$sync5 = curl($config['SITE_APIS'].'/potong/get/',json_encode($push5));
 							$hitpot5= json_decode($sync5,true);
 							$hasil5 = json_encode($hitpot5[0]['jml']);
 						?>	
@@ -240,7 +240,7 @@ include "header_detail.php";
 							}	
 							$_potong6 = array('tinggicetak'=>$lbr_pot6,'lebarcetak'=>$tinggi_pot6,'panjangtext'=>$lbr_plano6,'lebartext'=>$tinggi_plano6);
 							$push6 = array_merge($_jenis,$_potong6);
-							$sync6 = curl($config['SITE_API'].'/potong/get/',json_encode($push6));
+							$sync6 = curl($config['SITE_APIS'].'/potong/get/',json_encode($push6));
 							$hitpot6= json_decode($sync6,true);
 							$hasil6 = json_encode($hitpot6[0]['jml']);
 						?>	
@@ -259,7 +259,7 @@ include "header_detail.php";
 							}	
 							$_potong7 = array('tinggicetak'=>$lbr_pot7,'lebarcetak'=>$tinggi_pot7,'panjangtext'=>$lbr_plano7,'lebartext'=>$tinggi_plano7);
 							$push7= array_merge($_jenis,$_potong7);
-							$sync7= curl($config['SITE_API'].'/potong/get/',json_encode($push7));
+							$sync7= curl($config['SITE_APIS'].'/potong/get/',json_encode($push7));
 							$hitpot7= json_decode($sync7,true);
 							$hasil7 = json_encode($hitpot7[0]['jml']);
 						?>	
@@ -278,7 +278,7 @@ include "header_detail.php";
 							}	
 							$_potong8 = array('tinggicetak'=>$lbr_pot8,'lebarcetak'=>$tinggi_pot8,'panjangtext'=>$lbr_plano8,'lebartext'=>$tinggi_plano8);
 							$push8= array_merge($_jenis,$_potong8);
-							$sync8= curl($config['SITE_API'].'/potong/get/',json_encode($push7));
+							$sync8= curl($config['SITE_APIS'].'/potong/get/',json_encode($push7));
 							$hitpot8= json_decode($sync8,true);
 							$hasil8 = json_encode($hitpot8[0]['jml']);
 						?>	

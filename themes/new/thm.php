@@ -33,6 +33,7 @@
         <link rel="stylesheet" type="text/css" href="<?= $base; ?>/assets/sweetalert2/dist/sweetalert2.css">
         <!--   Core JS Files   -->
         <script src="<?= $base; ?>/assets/js/core/jquery.min.js" type="text/javascript"></script>
+        <script src="<?= $base; ?>/assets/js/jquery-ui.min.js" type="text/javascript"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript"></script>
         <script src="<?= $base; ?>/assets/js/core/popper.min.js" type="text/javascript"></script>
         <script src="<?= $base; ?>/assets/sweetalert2/dist/sweetalert2.js" type="text/javascript"></script>
