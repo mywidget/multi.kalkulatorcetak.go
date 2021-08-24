@@ -8,6 +8,7 @@
 	<meta name="author" content="" />
 	<meta name="email" content="" />
 	<!-- Bootstrap Core CSS -->
+	<link rel="icon" type="image/png" href="../../themes/new/assets/img/favicon.png">
 	<link href="../../themes/new/assets/css/argon-design-system.css?v=1.2.0" rel="stylesheet" />
 	<!-- Custom CSS -->
 	<link rel="stylesheet" href="../../themes/style-hitung.css"> <!-- style-hitung -->
