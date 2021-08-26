@@ -87,6 +87,13 @@
 		curl_close($ch);      
 		return $output;
 	}
+	function site_URL() {
+		$protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || 
+		$_SERVER['SERVER_PORT'] == 443) ? "" : "";
+		$domainName = $_SERVER['HTTP_HOST'];
+		return $protocol.$domainName;
+	}
+	
 	function siteURL() {
 		$protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || 
 		$_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
